@@ -35,7 +35,7 @@ public class MainPageTests extends WebTestBase {
 
     @Test
     @WithLogin
-    @DisplayName("Проверка быстрого создания задачи на главной странице")
+    @DisplayName("Проверка быстрого создания привычки на главной странице")
     void quickCreateHabitTest() {
         mainPage.openMainPage()
                 .createQuickHabit(habitName)
