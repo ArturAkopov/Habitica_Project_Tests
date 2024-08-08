@@ -14,4 +14,5 @@ public interface AuthConfig extends Config {
     String apiToken();
     String browserstackUser();
     String browserstackPassword();
+    String selenoidUrl();
 }

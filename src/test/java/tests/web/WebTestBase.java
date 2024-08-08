@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.APIConfig;
+import config.AuthConfig;
 import config.WebConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -23,6 +24,7 @@ public class WebTestBase {
         RestAssured.baseURI = apiConfig.baseURI();
         RestAssured.basePath = apiConfig.basePath();
 
+        AuthConfig authConfig = ConfigFactory.create(AuthConfig.class, System.getProperties());
         WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
         SelenideLogger.addListener("allure", new AllureSelenide());
         Configuration.baseUrl = webConfig.baseUrl();
@@ -32,7 +34,7 @@ public class WebTestBase {
 
         if (System.getProperty("browserHost", "selenoid").equals("selenoid")) {
         Configuration.browserVersion = webConfig.browserVersion();
-        Configuration.remote = webConfig.selenoidUrl();
+        Configuration.remote = authConfig.selenoidUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
