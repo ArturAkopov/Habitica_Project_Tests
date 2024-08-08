@@ -23,8 +23,7 @@ public class MobileTestBase {
             Configuration.browser = RealMobileDriver.class.getName();
         } else if (System.getProperty("deviceHost", "browserstack").equals("emulation")) {
             Configuration.browser = EmulateMobileDriver.class.getName();
-        }
-        else if (System.getProperty("deviceHost", "browserstack").equals("browserstack")) {
+        } else if (System.getProperty("deviceHost", "browserstack").equals("browserstack")) {
             Configuration.browser = BrowserStackMobileDriver.class.getName();
         }
     }

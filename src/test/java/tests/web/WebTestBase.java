@@ -33,15 +33,15 @@ public class WebTestBase {
         Configuration.pageLoadStrategy = "eager";
 
         if (System.getProperty("browserHost", "selenoid").equals("selenoid")) {
-        Configuration.browserVersion = webConfig.browserVersion();
-        Configuration.remote = authConfig.selenoidUrl();
+            Configuration.browserVersion = webConfig.browserVersion();
+            Configuration.remote = authConfig.selenoidUrl();
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-        Configuration.browserCapabilities = capabilities;
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                    "enableVNC", true,
+                    "enableVideo", true
+            ));
+            Configuration.browserCapabilities = capabilities;
         }
     }
 
