@@ -121,6 +121,9 @@ gradle clean web -DbrowserHost=local
 > Если требуется передать параметры отличные от дефолтных в интерфейсе WebConfig  
 > то можно изменить интерфейс, либо передать свои параметры в переменных при запуске тестов  
 > Например:
+>* <code>baseUrl</code> – URL.
+>* <code>browser</code> – браузер, в котором будут выполняться тесты.
+>* <code>browserSize</code> – размер окна браузера, в котором будут выполняться тесты.
 > ```
 >-DbaseUrl=https://habitica.com
 >-Dbrowser=chrome
@@ -240,11 +243,16 @@ gradle clean web -DbrowserHost=selenoid
 > Если требуется передать параметры отличные от дефолтных в интерфейсе WebConfig  
 > то можно изменить интерфейс, либо передать свои параметры в переменных при запуске тестов  
 > Например:
+>* <code>baseUrl</code> – URL.
+>* <code>browser</code> – браузер, в котором будут выполняться тесты.
+>* <code>browserVersion</code> – версия браузера, в которой будут выполняться тесты.
+>* <code>browserSize</code> – размер окна браузера, в котором будут выполняться тесты.
 > ```
 >-DbaseUrl=https://habitica.com
 >-Dbrowser=chrome
->-DbrowserSize=1920x1080
 >-DbrowserVersion=100
+>-DbrowserSize=1920x1080
+
 >```
 Запуск мобильных тестов на BrowserStack
 ```
@@ -256,7 +264,7 @@ gradle clean mobile -DdeviceHost=browserstack
 ```
 ---
 
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Сборка в Jenkins
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/27-AnBrain-unit23-Habitica_Tests_Project)
 
 * <code>TASK</code> – название запускаемой задачи. По умолчанию - <code>test</code>.
 * <code>BASE_URL</code> – URL. По умолчанию - <code>https://habitica.com</code>.
@@ -281,7 +289,7 @@ clean ${TASK}
 а так же появятся значек <code>Allure TestOps</code> при клике на который откроется страница проекта в <code>Allure TestOps</code>.
 
 ---
-## <img width="4%" style="vertical-align:middle" title="Allure_Report" src="media/logo/Allure_Report.svg"> Интеграция с Allure Report
+## <img width="4%" style="vertical-align:middle" title="Allure_Report" src="media/logo/Allure_Report.svg"> Интеграция с [Allure Report](https://jenkins.autotests.cloud/job/27-AnBrain-unit23-Habitica_Tests_Project/6/allure/)
 `ALLURE REPORT` - отображает дату и время теста, общее количество запущенных тестов, а также диаграмму с процентом и количеством успешных, упавших и сломавшихся в процессе выполнения тестов  
 `TREND` - отображает тенденцию выполнения тестов для всех запусков  
 `SUITES` - отображает распределение тестов по сьютам  
@@ -303,7 +311,7 @@ clean ${TASK}
 </p>
 
 ---
-## <img width="4%" style="vertical-align:middle" title="Allure_TestOps" src="media/logo/Allure_TO.svg"> Интеграция с Allure TestOps
+## <img width="4%" style="vertical-align:middle" title="Allure_TestOps" src="media/logo/Allure_TO.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/4348)
 
 ### Дашборд
 
@@ -323,7 +331,7 @@ clean ${TASK}
 </p>
 
 ---
-## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с Jira
+## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1304)
 
 ### В Jira создана задача
 <p align="center">  
