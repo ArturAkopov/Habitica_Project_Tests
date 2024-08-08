@@ -22,8 +22,7 @@ public interface WebConfig extends Config {
     @DefaultValue("100")
     String browserVersion();
 
-    @Key("remote")
-    @DefaultValue("https://user1:1234@selenoid.autotests.cloud/wd/hub")
-    String remote();
+    @Key("selenoidUrl")
+    String selenoidUrl();
 
 }

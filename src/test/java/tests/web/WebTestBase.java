@@ -32,7 +32,7 @@ public class WebTestBase {
 
         if (System.getProperty("browserHost", "selenoid").equals("selenoid")) {
         Configuration.browserVersion = webConfig.browserVersion();
-        Configuration.remote = webConfig.remote();
+        Configuration.remote = webConfig.selenoidUrl();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
