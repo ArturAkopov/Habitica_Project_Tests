@@ -245,7 +245,6 @@ gradle clean web -DbrowserHost=selenoid
 >-Dbrowser=chrome
 >-DbrowserSize=1920x1080
 >-DbrowserVersion=100
->-Dremote={Требуемый URL для удаленного запуска}
 >```
 Запуск мобильных тестов на BrowserStack
 ```
