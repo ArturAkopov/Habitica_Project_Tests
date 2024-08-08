@@ -133,7 +133,7 @@ public class TestSteps {
         Assertions.assertThat(response.getData().getTasksOrder().getHabits()).isNotNull();
         Assertions.assertThat(response.getData().getTasksOrder().getTodos()).isNotNull();
         Assertions.assertThat(response.getData().getTasksOrder().getDailys()).isNotNull();
-        Assertions.assertThat(response.getData().getTasksOrder().getHabits()).isNotNull();
+        Assertions.assertThat(response.getData().getTasksOrder().getRewards()).isNotNull();
     }
 
     @Step("Проверка успешного создания задачи")
